@@ -46,7 +46,7 @@ if (presidenMenjabatPadaTahun.length == 0) {
 // Nilai dari variabel ini akan dimasukkan ke dalam pesan untuk menampilkan tahun yang dicari.
 
 // ':' adalah string teks yang digunakan untuk memisahkan antara tahun yang dicari dengan daftar
-//  buku yang sesuai dengan tahun tersebut.
+//  presiden yang sesuai dengan tahun tersebut.
 
-// bukuTerbitPadaTahun adalah variabel yang berisi hasil dari filter berdasarkan tahun terbit.
+// presidenMenjabatPadaTahun adalah variabel yang berisi hasil dari filter berdasarkan tahun menjabat.
 // Hasil ini adalah array objek-objek buku yang sesuai dengan tahun yang dicari.
