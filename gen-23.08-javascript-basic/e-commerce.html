@@ -4,8 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter'],
+                        oswald: ['Oswald'],
+                        sosial: ['Social-Gothic']
+                    },
+                },
+            },
+        };
+    </script>
     <title>Tailwindcss Ecommerce</title>
+    <style type="text/tailwindcss"></style>
 </head>
 
 <body>
@@ -69,7 +84,7 @@
         <h2 class="mt-24 mb-10 pl-14 font-bold text-3xl text-slate-700 uppercase">CHOCOLATE CHRISTMAS
             CALENDARS WITH 30 & 60 PIECES</h2>
         <div class="container px-6 sm:flex sm:flex-wrap sm:gap-6 sm:justify-evenly product" id="product">
-            <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <!--  <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72">
                 <a href="view.html">
                     <img src="img/cc1.jpeg" alt="ImageCaption" class="w-full" /></a>
                 <div class="px-6 py-4">
@@ -101,7 +116,7 @@
                         WITH 60 PSC. OF CHOCOLATE</div>
                     <p class="text-sm text-slate-600 text-center">649 KR</p>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
     <!-- End Product -->
@@ -181,7 +196,7 @@
 
     </footer>
     <!-- End Footer -->
-    <!-- <script src="js/detail.js"></script> -->
+    <script src="detail.js"></script>
 </body>
 
 </html>

@@ -4,9 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter'],
+                        oswald: ['Oswald'],
+                        sosial: ['Social-Gothic']
+                    },
+                },
+            },
+        };
+    </script>
     <title>Detail Product</title>
+    <style type="text/tailwindcss"></style>
 </head>
 
 <body>
@@ -19,9 +33,9 @@
     </nav>
     <!-- End Navbar -->
     <div class="bg-[#b88967] detail" id="detail">
-        <div class="container grid grid-cols-2 gap-6 mx-auto detail" id="detail">
-            <!-- product image -->
-            <div class="">
+        <!-- <div class="container grid grid-cols-2 gap-6 mx-auto detail" id="detail"> -->
+        <!-- product image -->
+        <!-- <div class="">
                 <img src="img/cc1.jpeg" alt="gambar" class="w-[435px] h-[513px] items-center slide">
                 <div class="columns-3 mt-4 flex flex-wrap">
                     <img src="img/cc1.jpeg" alt="gambar" class="w-20 cursor-pointer mb-4" onclick="img('img/cc1.jpeg')">
@@ -30,10 +44,10 @@
                     <img src="img/cc1-2.jpeg" alt="gambar" class="w-20 cursor-pointer mb-4"
                         onclick="img('img/cc1-2.jpeg')">
                 </div>
-            </div>
-            <!-- end product image -->
-            <!-- product content -->
-            <div class="pt-16 text-white">
+            </div> -->
+        <!-- end product image -->
+        <!-- product content -->
+        <!-- <div class="pt-16 text-white">
                 <h2 class="text-2xl font-sosial uppercase mb-2 font-bold">CREAM CHOCOLATE CHRISTMAS CALENDAR WITH 30
                     DOORS
                 </h2>
@@ -89,85 +103,33 @@
                         <span class="text-white font-sosial space-x-2 italic">Salt: </span>
                         <span class="text-slate-800">0,16 g</span>
                     </p>
-                </div>
-                <!-- size -->
-                <div class="pt-4 font-sosial mt-4">
-                    <h3 class="text-xl text-white mb-3 uppercase font-sosial">Size</h3>
-                    <div class="flex items-center gap-2">
-                        <!-- tombol size -->
-                        <div class="size-selector">
-                            <input type="radio" name="size" class="hidden" id="size-xs">
-                            <label for="size-xs"
-                                class="mb-5 text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-white">
-                                XS
-                            </label>
-                        </div>
-                        <!-- end tombol size -->
-                        <!-- tombol size -->
-                        <div class="size-selector">
-                            <input type="radio" name="size" class="hidden" id="size-s">
-                            <label for="size-s"
-                                class="mb-5 text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-white">
-                                S
-                            </label>
-                        </div>
-                        <!-- end tombol size -->
-                        <!-- tombol size -->
-                        <div class="size-selector">
-                            <input type="radio" name="size" class="hidden" id="size-l">
-                            <label for="size-l"
-                                class="mb-5 text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-white">
-                                L
-                            </label>
-                        </div>
-                        <!-- end tombol size -->
-                        <!-- tombol size -->
-                        <div class="size-selector">
-                            <input type="radio" name="size" class="hidden" id="size-m">
-                            <label for="size-m"
-                                class="mb-5 text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-white">
-                                M
-                            </label>
-                        </div>
-                        <!-- end tombol size -->
-                        <!-- tombol size -->
-                        <div class="size-selector">
-                            <input type="radio" name="size" class="hidden" id="size-xl">
-                            <label for="size-xl"
-                                class="mb-5 text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-white">
-                                XL
-                            </label>
-                        </div>
-                        <!-- end tombol size -->
-                    </div>
-                </div>
-                <!-- end size -->
-                <!-- quantitiy -->
-                <div class="mt-4 mb-4">
-                    <h3 class="text-sm text-white uppercase mb-1">Quantity</h3>
-                    <div class="flex border border-gray-300 text-white divide-x divide-gray-300 w-max">
-                        <div class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">-</div>
-                        <div class="h-8 w-8 text-xl flex items-center justify-center">2</div>
-                        <div class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">+</div>
-                    </div>
-                </div>
-                <!-- end quantitiy -->
+                </div> -->
+        <!-- size -->
 
-                <!-- cart button -->
-                <div class="flex gap-3 border-b border-slate-50 pb-5 mt-6">
-                    <a href="#"
-                        class="bg-slate-600 border border-slate-600 text-white px-8 py-2 font-sosial rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-slate-800 transition ">
-                        <span>🛒</span> Add to cart
-                    </a>
-                    <a href="#"
-                        class="border border-slate-300 text-white px-8 py-2 font-sosial rounded uppercase flex items-center gap-2 hover:text-slate-800 transition ">
-                        <span>♥</span> Wishlist
-                    </a>
-
+        <!-- end size -->
+        <!-- quantitiy -->
+        <!-- <div class="mt-4 mb-4">
+                <h3 class="text-sm text-white uppercase mb-1">Quantity</h3>
+                <div class="flex border border-gray-300 text-white divide-x divide-gray-300 w-max">
+                    <div class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">-</div>
+                    <div class="h-8 w-8 text-xl flex items-center justify-center">2</div>
+                    <div class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">+</div>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        <!-- end quantitiy -->
 
+        <!-- cart button -->
+        <!-- <div class="flex gap-3 border-b border-slate-50 pb-5 mt-6">
+                <a href="#"
+                    class="bg-slate-600 border border-slate-600 text-white px-8 py-2 font-sosial rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-slate-800 transition ">
+                    <span>🛒</span> Add to cart
+                </a>
+                <a href="#"
+                    class="border border-slate-300 text-white px-8 py-2 font-sosial rounded uppercase flex items-center gap-2 hover:text-slate-800 transition ">
+                    <span>♥</span> Wishlist
+                </a>
+
+            </div> -->
         <!-- end cart button -->
         <!-- </div> -->
 
@@ -203,13 +165,12 @@
     <div class="container font-sosial mx-auto">
         <h2 class="mt-24 mb-10 pl-14 font-bold text-3xl text-slate-700 uppercase">Related Product</h2>
         <div class="container px-6 sm:flex sm:flex-wrap sm:gap-6 sm:justify-evenly product" id="product">
-            <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <!-- <div class="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72">
                 <a href="view.html">
                     <img src="https://simplychocolatecph.com/cdn/shop/files/Cremecentreret_600x.png?v=1693560773"
                         alt="ImageCaption" class="w-full" /></a>
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-slate-700 text-center">CREAM CHOCOLATE CHRISTMAS
-                        CALENDAR
+                    <div class="font-bold text-xl mb-2 text-slate-700 text-center">CREAM CHOCOLATE CHRISTMAS CALENDAR
                         WITH 30 DOORS</div>
                     <p class="text-sm text-slate-600 text-center">359 KR</p>
                 </div>
@@ -218,8 +179,7 @@
                 <img src="https://simplychocolatecph.com/cdn/shop/files/Lyseblacentreret_600x.png?v=1693560808"
                     alt="ImageCaption" class="w-full" />
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-slate-700 text-center">LIGHT BLUE CHOCOLATE
-                        CHRISTMAS
+                    <div class="font-bold text-xl mb-2 text-slate-700 text-center">LIGHT BLUE CHOCOLATE CHRISTMAS
                         CALENDAR WITH 30 DOORS</div>
                     <p class="text-sm text-slate-600 text-center">359 KR</p>
                 </div>
@@ -228,8 +188,7 @@
                 <img src="https://simplychocolatecph.com/cdn/shop/files/Megacentreret_600x.png?v=1693560823"
                     alt="ImageCaption" class="w-full" />
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-slate-700 text-center">MEGA SIZE CHOCOLATE CALENDAR
-                        WITH 30
+                    <div class="font-bold text-xl mb-2 text-slate-700 text-center">MEGA SIZE CHOCOLATE CALENDAR WITH 30
                         DOORS</div>
                     <p class="text-sm text-slate-600 text-center">999 KR</p>
                 </div>
@@ -238,12 +197,11 @@
                 <img src="https://simplychocolatecph.com/cdn/shop/files/Sharingcentreret_600x.png?v=1693559746"
                     alt="ImageCaption" class="w-full" />
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-slate-700 text-center">SHARING CHOCOLATE CHRISTMAS
-                        CALENDER
+                    <div class="font-bold text-xl mb-2 text-slate-700 text-center">SHARING CHOCOLATE CHRISTMAS CALENDER
                         WITH 60 PSC. OF CHOCOLATE</div>
                     <p class="text-sm text-slate-600 text-center">649 KR</p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -275,12 +233,10 @@
                             <a href="#" class="text-base text-white hover:text-red-400 block">Bites</a>
                             <a href="#" class="text-base text-white hover:text-red-400 block">Protein</a>
                             <a href="#" class="text-base text-white hover:text-red-400 block">Gift Boxes</a>
-                            <a href="#" class="text-base text-white hover:text-red-400 block">Limited
-                                Editions</a>
+                            <a href="#" class="text-base text-white hover:text-red-400 block">Limited Editions</a>
                             <a href="#" class="text-base text-white hover:text-red-400 block">Bar Kits</a>
                             <a href="#" class="text-base text-white hover:text-red-400 block">Company Gifts</a>
-                            <a href="#" class="text-base text-white hover:text-red-400 block">Christmas
-                                Calendar</a>
+                            <a href="#" class="text-base text-white hover:text-red-400 block">Christmas Calendar</a>
                         </div>
                     </div>
                     <div>
@@ -290,12 +246,10 @@
                             <a href="#" class="text-base text-white hover:text-red-400 block">Bites</a>
                             <a href="#" class="text-base text-white hover:text-red-400 block">Protein</a>
                             <a href="#" class="text-base text-white hover:text-red-400 block">Gift Boxes</a>
-                            <a href="#" class="text-base text-white hover:text-red-400 block">Limited
-                                Editions</a>
+                            <a href="#" class="text-base text-white hover:text-red-400 block">Limited Editions</a>
                             <a href="#" class="text-base text-white hover:text-red-400 block">Bar Kits</a>
                             <a href="#" class="text-base text-white hover:text-red-400 block">Company Gifts</a>
-                            <a href="#" class="text-base text-white hover:text-red-400 block">Christmas
-                                Calendar</a>
+                            <a href="#" class="text-base text-white hover:text-red-400 block">Christmas Calendar</a>
                         </div>
                     </div>
 
@@ -308,12 +262,10 @@
                             <a href="#" class="text-base text-white hover:text-red-400 block">Bites</a>
                             <a href="#" class="text-base text-white hover:text-red-400 block">Protein</a>
                             <a href="#" class="text-base text-white hover:text-red-400 block">Gift Boxes</a>
-                            <a href="#" class="text-base text-white hover:text-red-400 block">Limited
-                                Editions</a>
+                            <a href="#" class="text-base text-white hover:text-red-400 block">Limited Editions</a>
                             <a href="#" class="text-base text-white hover:text-red-400 block">Bar Kits</a>
                             <a href="#" class="text-base text-white hover:text-red-400 block">Company Gifts</a>
-                            <a href="#" class="text-base text-white hover:text-red-400 block">Christmas
-                                Calendar</a>
+                            <a href="#" class="text-base text-white hover:text-red-400 block">Christmas Calendar</a>
                         </div>
                     </div>
 
@@ -329,7 +281,7 @@
 
     </footer>
     <!-- End Footer -->
-    <!-- <script src="js/detail.js"></script> -->
+    <script src="detail.js"></script>
 </body>
 
 </html>
