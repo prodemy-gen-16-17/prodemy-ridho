@@ -17,7 +17,7 @@ searchButton.addEventListener("click", () => {
                 }
 
                 const data = response.data;
-                if (data.length == 0) {
+                if (data.products.length == 0) {
                     // Tampilkan pesan "Data tidak ada" di konsol jika tidak ada hasil pencarian
                     console.log("Data tidak ada");
                 } else {
@@ -46,7 +46,7 @@ function displaySearchResults(results) {
     const preElement = document.createElement("pre");
 
 
-    if (results.length == 0) {
+    if (results.products.length === 0) {
         searchResults.innerHTML = "<p>Tidak ada hasil ditemukan.</p>";
         return;
     }
