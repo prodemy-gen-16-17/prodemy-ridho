@@ -1,0 +1,1 @@
+Aku mah masih pemula
