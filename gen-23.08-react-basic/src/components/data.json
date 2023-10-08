@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "imageSrc": "src/img/cc1.jpeg",
+        "title": "CREAM CHOCOLATE CHRISTMAS CALENDAR WITH 30 DOORS",
+        "price": "359 KR"
+    },
+    {
+        "id": 2,
+        "imageSrc": "src/img/cc2.jpeg",
+        "title": "LIGHT BLUE CHOCOLATE CHRISTMAS CALENDAR WITH 30 DOORS",
+        "price": "359 KR"
+    },
+    {
+        "id": 3,
+        "imageSrc": "src/img/cc3.jpeg",
+        "title": "MEGA SIZE CHOCOLATE CALENDAR WITH 30 DOORS",
+        "price": "999 KR"
+    },
+    {
+        "id": 4,
+        "imageSrc": "src/img/cc4.jpeg",
+        "title": "SHARING CHOCOLATE CHRISTMAS CALENDER WITH 60 PSC. OF CHOCOLATE",
+        "price": "649 KR"
+    }
+]
