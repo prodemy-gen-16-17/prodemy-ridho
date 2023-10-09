@@ -16,9 +16,9 @@ function App() {
         feature2="Naturlige ingredienser"
         feature3="Produceret på solenergi"
       />
-      <hr class="my-16" />
+      <hr className="my-16" />
       <Product />
-      <div class="mb-96"></div>
+      <div className="mb-96"></div>
       <Footer formFooter={formFooter} linkFooter={linkFooter} />
     </>
   );
