@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from './ProductCard';
 import data from './data.json';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 function Product() {
@@ -24,6 +24,11 @@ function Product() {
             sortingData(dataSorting);
         }
     };
+
+    useEffect(() => {
+        // Default sorting by releaseDate (Terbaru ke Lama)
+        sortProducts('releaseDate');
+    }, []);
 
     {/* Cara Kedua */ }
     // const sortProducts = (sortBy) => {
@@ -61,12 +66,12 @@ function Product() {
                 >
                     Sort Berdasarkan Harga (Tinggi ke Rendah)
                 </button>
-                <button
+                {/* <button
                     className="px-4 py-2 bg-blue-500 text-white rounded"
                     onClick={() => sortProducts('releaseDate')}
                 >
                     Sort Berdasarkan Tanggal Rilis (Terbaru ke Lama)
-                </button>
+                </button> */}
             </div>
         </div>
     );
