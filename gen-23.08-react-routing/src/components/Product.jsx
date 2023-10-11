@@ -30,22 +30,6 @@ function Product() {
         sortProducts('releaseDate');
     }, []);
 
-    {/* Cara Kedua */ }
-    // const sortProducts = (sortBy) => {
-    //     if (sortBy === 'price') {
-    //         // Urutkan produk berdasarkan harga (tinggi ke rendah)
-    //         const sortedByPrice = [...sortedData].sort((x, y) => parseFloat(y.price) - parseFloat(x.price));
-    //         sortingData(sortedByPrice);
-    //     } else if (sortBy === 'releaseDate') {
-    //         // Urutkan produk berdasarkan tanggal rilis (baru ke lama)
-    //         const sortedByReleaseDate = [...sortedData].sort((x, y) => new Date(y.releaseDate) - new Date(x.releaseDate));
-    //         sortingData(sortedByReleaseDate);
-    //     }
-
-    //     // Perbarui state data dengan urutan yang baru
-    //     setData([...data]);
-    // };
-
     return (
         <div className="container font-sosial mx-auto">
 

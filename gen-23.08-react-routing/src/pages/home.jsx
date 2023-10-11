@@ -1,42 +1,28 @@
-import React from "react";
-import background from "../img/cc.jpeg";
-import inputHeader from '../components/InputHeader';
+import React from 'react';
+import Tampilan from "../components/Tampilan";
+import Header from '../components/Header';
+import Headline from '../components/Headline';
+import Product from '../components/Product';
+import Footer from '../components/Footer';
+import { formFooter, linkFooter } from '../components/DataFooter';
 
-
-
-function Home() {
-    const myBackground = {
-        backgroundImage: `url(${background})`,
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
-    };
+const Home = () => {
     return (
-        <div className="py-80 relative"
-            style={myBackground}>
-            <div className="container flex">
-                <div className="cursor-pointer">
-                    <h1 className="text-4xl text-black font-sosial absolute top-40 left-0 -rotate-90">Simply
-                        Chocolate</h1>
-                </div>
-                <div className="flex items-center justify-between flex-grow pl-12 uppercase font-sosial">
-                    <div className="absolute pl-36 top-5 left-5 items-center space-x-6">
-                        {inputHeader.map((link, index) => (
-                            <a key={index} href={link.url} className="text-gray-500 hover:text-slate-50 transition">
-                                {link.text}
-                            </a>
-                        ))}
-                    </div>
-                    <a href="#" className="text-black hover:text-slate-50 transition absolute top-5 right-16 items-center text-lg">
-                        Cart</a>
-                </div>
-
-            </div>
-
-        </div>
-
-
+        <>
+            <Header titleHeader="Selamat Berbelanja" />
+            <Tampilan />
+            <Headline
+                feature1="Håndlavet i Danmark"
+                feature2="Naturlige ingredienser"
+                feature3="Produceret på solenergi"
+            />
+            <hr className="my-16" />
+            <Product />
+            <div className="mb-96"></div>
+            <Footer formFooter={formFooter} linkFooter={linkFooter} />
+        </>
     );
+
 }
 
 export default Home;
