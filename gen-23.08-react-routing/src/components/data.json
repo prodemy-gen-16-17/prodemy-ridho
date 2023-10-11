@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "imageSrc": "src/img/cc1.jpeg",
+        "title": "CREAM CHOCOLATE CHRISTMAS CALENDAR WITH 30 DOORS",
+        "price": "800",
+        "releaseDate": "2023-03-14"
+    },
+    {
+        "id": 2,
+        "imageSrc": "src/img/cc2.jpeg",
+        "title": "LIGHT BLUE CHOCOLATE CHRISTMAS CALENDAR WITH 30 DOORS",
+        "price": "1000",
+        "releaseDate": "2023-01-12"
+    },
+    {
+        "id": 3,
+        "imageSrc": "src/img/cc3.jpeg",
+        "title": "MEGA SIZE CHOCOLATE CALENDAR WITH 30 DOORS",
+        "price": "999",
+        "releaseDate": "2023-04-22"
+    },
+    {
+        "id": 4,
+        "imageSrc": "src/img/cc4.jpeg",
+        "title": "SHARING CHOCOLATE CHRISTMAS CALENDER WITH 60 PSC. OF CHOCOLATE",
+        "price": "649",
+        "releaseDate": "2023-05-11"
+    },
+    {
+        "id": 5,
+        "imageSrc": "src/img/cc5.jpeg",
+        "title": "TRIAL KIT WITH 14 PREMIUM CHOCOLATE BARS",
+        "price": "199",
+        "releaseDate": "2023-03-01"
+    },
+    {
+        "id": 6,
+        "imageSrc": "src/img/cc6.jpeg",
+        "title": "GLUTEN-FREE CHOCOLATE FAVOURITES",
+        "price": "180",
+        "releaseDate": "2023-08-29"
+    },
+    {
+        "id": 7,
+        "imageSrc": "src/img/cc7.jpeg",
+        "title": "VEGAN FAVOURITES",
+        "price": "222",
+        "releaseDate": "2023-02-17"
+    },
+    {
+        "id": 8,
+        "imageSrc": "src/img/cc8.jpeg",
+        "title": "MARZIPAN AND A DOUBLE LAYER OF PREMIUM DARK CHOCOLATE",
+        "price": "123",
+        "releaseDate": "2023-06-08"
+    }
+]
