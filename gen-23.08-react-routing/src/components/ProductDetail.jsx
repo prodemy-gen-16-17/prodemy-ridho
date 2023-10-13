@@ -1,10 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useState } from 'react';
 import data from './data.json';
 
 function ProductDetail() {
     const { productId } = useParams();
-    const product = data.find((p) => p.id === parseInt(productId));
+    const product = data.find((ambil) => ambil.id === parseInt(productId));
+    const [selectedImage, setSelectedImage] = useState(null);
+    const handleImageClick = (imageSrc) => {
+        setSelectedImage(imageSrc);
+    };
 
     if (!product) {
         return <div>Produk tidak ditemukan.</div>;
@@ -13,15 +18,17 @@ function ProductDetail() {
     const { title, secTitle, imageSrc, price, priceBefore, rating, reviews, releaseDate, img11, img12
     } = product;
 
+
+
     return (
         <div className="bg-[#b88967] detail" id="detail">
             <div className="container grid grid-cols-2 gap-6 mx-auto detail" id="detail">
                 <div>
-                    <img src={imageSrc} alt={title} className="w-[435px] h-[513px] items-center slide" />
+                    <img src={selectedImage || imageSrc} alt={title} className="w-[435px] h-[513px] items-center slide" />
                     <div className="columns-3 mt-4 flex flex-wrap">
-                        <img src={imageSrc} alt={title} className="w-20 cursor-pointer mb-4" />
-                        <img src={img11} alt={title} className="w-20 cursor-pointer mb-4" />
-                        <img src={img12} alt={title} className="w-20 cursor-pointer mb-4" />
+                        <img src={imageSrc} alt={title} className="w-20 cursor-pointer mb-4" onClick={() => handleImageClick(imageSrc)} />
+                        <img src={img11} alt={title} className="w-20 cursor-pointer mb-4" onClick={() => handleImageClick(img11)} />
+                        <img src={img12} alt={title} className="w-20 cursor-pointer mb-4" onClick={() => handleImageClick(img12)} />
                     </div>
                 </div>
                 <div className="pt-16 text-white">
