@@ -1,58 +1,106 @@
 [
     {
         "id": 1,
-        "imageSrc": "src/img/cc1.jpeg",
+        "imageSrc": "/src/img/cc1.jpeg",
         "title": "CREAM CHOCOLATE CHRISTMAS CALENDAR WITH 30 DOORS",
+        "secTitle": "CHRISTMAS CALENDAR WITH FINE SNOWFLAKES THAT BRINGS OUT THE CHRISTMAS MAGIC IN ALL OF US",
         "price": "800",
-        "releaseDate": "2023-03-14"
+        "priceBefore": "900",
+        "rating": "⭐⭐⭐⭐⭐",
+        "reviews": "100",
+        "releaseDate": "2023-03-14",
+        "img11": "/src/img/cc1-1.jpeg",
+        "img12": "/src/img/cc1-2.jpeg"
     },
     {
         "id": 2,
-        "imageSrc": "src/img/cc2.jpeg",
+        "imageSrc": "/src/img/cc2.jpeg",
         "title": "LIGHT BLUE CHOCOLATE CHRISTMAS CALENDAR WITH 30 DOORS",
+        "secTitle": "THE CHRISTMAS CALENDAR, WHICH FILLS YOU WITH TASTY CHOCOLATE DELIGHTS",
         "price": "1000",
-        "releaseDate": "2023-01-12"
+        "priceBefore": "1200",
+        "rating": "⭐⭐⭐⭐",
+        "reviews": "77",
+        "releaseDate": "2023-01-12",
+        "img11": "/src/img/cc2-1.jpeg",
+        "img12": "/src/img/cc2-2.jpeg"
     },
     {
         "id": 3,
-        "imageSrc": "src/img/cc3.jpeg",
+        "imageSrc": "/src/img/cc3.jpeg",
         "title": "MEGA SIZE CHOCOLATE CALENDAR WITH 30 DOORS",
+        "secTitle": "HUGE CHRISTMAS CALENDAR WITH BARELY ONE AND A HALF KILOS OF CHOCOLATE",
         "price": "999",
-        "releaseDate": "2023-04-22"
+        "priceBefore": "1400",
+        "rating": "⭐⭐⭐⭐",
+        "reviews": "80",
+        "releaseDate": "2023-04-22",
+        "img11": "/src/img/cc3-1.jpeg",
+        "img12": "/src/img/cc3-2.jpeg"
     },
     {
         "id": 4,
-        "imageSrc": "src/img/cc4.jpeg",
+        "imageSrc": "/src/img/cc4.jpeg",
         "title": "SHARING CHOCOLATE CHRISTMAS CALENDER WITH 60 PSC. OF CHOCOLATE",
+        "secTitle": "PRE-ORDER THE CHRISTMAS CALENDAR FOR SHARING OR FOR A REAL CHOCOLATE LOVER",
         "price": "649",
-        "releaseDate": "2023-05-11"
+        "priceBefore": "900",
+        "rating": "⭐⭐⭐",
+        "reviews": "55",
+        "releaseDate": "2023-05-11",
+        "img11": "/src/img/cc4-1.jpeg",
+        "img12": "/src/img/cc4-2.jpeg"
     },
     {
         "id": 5,
-        "imageSrc": "src/img/cc5.jpeg",
-        "title": "TRIAL KIT WITH 14 PREMIUM CHOCOLATE BARS",
+        "imageSrc": "/src/img/cc5.jpeg",
+        "title": "FOR ALL YOUR SENSES 14 PACK",
+        "secTitle": "TRIAL KIT WITH 14 PREMIUM CHOCOLATE BARS",
         "price": "199",
-        "releaseDate": "2023-03-01"
+        "priceBefore": "521",
+        "rating": "⭐⭐⭐⭐",
+        "reviews": "79",
+        "releaseDate": "2023-03-01",
+        "img11": "/src/img/cc5-1.jpeg",
+        "img12": "/src/img/cc5-2.jpeg"
     },
     {
         "id": 6,
-        "imageSrc": "src/img/cc6.jpeg",
-        "title": "GLUTEN-FREE CHOCOLATE FAVOURITES",
+        "imageSrc": "/src/img/cc6.jpeg",
+        "title": "GLUTENFREE 12-PACK",
+        "secTitle": "GLUTEN-FREE CHOCOLATE FAVOURITES",
         "price": "180",
-        "releaseDate": "2023-08-29"
+        "priceBefore": "347",
+        "rating": "⭐⭐⭐⭐⭐",
+        "reviews": "122",
+        "releaseDate": "2023-08-29",
+        "img11": "/src/img/cc6-1.jpeg",
+        "img12": "/src/img/cc6-2.jpeg"
     },
     {
         "id": 7,
-        "imageSrc": "src/img/cc7.jpeg",
-        "title": "VEGAN FAVOURITES",
+        "imageSrc": "/src/img/cc7.jpeg",
+        "title": "VEGAN 12-PACK",
+        "secTitle": "VEGAN FAVOURITES",
         "price": "222",
-        "releaseDate": "2023-02-17"
+        "priceBefore": "417",
+        "rating": "⭐⭐⭐",
+        "reviews": "66",
+        "releaseDate": "2023-02-17",
+        "img11": "/src/img/cc7-1.jpeg",
+        "img12": "/src/img/cc7-2.jpeg"
     },
     {
         "id": 8,
-        "imageSrc": "src/img/cc8.jpeg",
-        "title": "MARZIPAN AND A DOUBLE LAYER OF PREMIUM DARK CHOCOLATE",
+        "imageSrc": "/src/img/cc8.jpeg",
+        "title": "LOVE 12-PACK",
+        "secTitle": "MARZIPAN AND A DOUBLE LAYER OF PREMIUM DARK CHOCOLATE",
         "price": "123",
-        "releaseDate": "2023-06-08"
+        "priceBefore": "333",
+        "rating": "⭐⭐⭐⭐",
+        "reviews": "83",
+        "releaseDate": "2023-06-08",
+        "img11": "/src/img/cc8-1.png",
+        "img12": "/src/img/cc8-2.jpeg"
     }
 ]

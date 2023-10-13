@@ -17,7 +17,7 @@ const Home = () => {
                 feature3="Produceret på solenergi"
             />
             <hr className="my-16" />
-            <Product />
+            <Product titleCard="CHOCOLATE CHRISTMAS CALENDARS WITH 30 & 60 PIECES" />
             <div className="mb-96"></div>
             <Footer formFooter={formFooter} linkFooter={linkFooter} />
         </>

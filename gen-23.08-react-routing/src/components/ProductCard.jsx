@@ -6,7 +6,7 @@ function ProductCard(props) {
 
     return (
         <div className="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72">
-            <Link to={`/${id}`}>
+            <Link to={`/products/${id}`}>
                 <img src={imageSrc} alt="ImageCaption" className="w-full" />
             </Link>
             <div className="px-6 py-4">
