@@ -21,7 +21,7 @@ function ProductDetail(props) {
         return <div>Error loading data</div>;
     }
     if (!data) {
-        return <div>Nothing</div>;
+        return <div>Loading...</div>;
     }
 
     const { title, secTitle, imageSrc, price, priceBefore, rating, reviews, releaseDate, img11, img12
