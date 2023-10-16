@@ -2,7 +2,7 @@ import React from 'react';
 import Home from './pages/home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DetailProduct from './pages/DetailProduct';
-// import ProductList from './components/ProductList';
+import FormCheckout from './pages/FormCheckout';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path="/products/:id" element={<DetailProduct />} />
-        {/* <Route path="/product" component={<Product />} /> */}
+        <Route path='/form' element={<FormCheckout />} />
       </Routes>
     </BrowserRouter>
   )

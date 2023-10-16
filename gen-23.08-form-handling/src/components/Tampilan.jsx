@@ -1,6 +1,7 @@
 import React from "react";
 import background from "../img/cc.jpeg";
 import inputHeader from './InputHeader';
+import { Link } from 'react-router-dom';
 
 
 function Tampilan() {
@@ -26,8 +27,10 @@ function Tampilan() {
                             </a>
                         ))}
                     </div>
-                    <a href="#" className="text-black hover:text-slate-50 transition absolute top-5 right-16 items-center text-lg">
-                        Cart</a>
+                    <Link to={"/form"}>
+                        <a className="text-black hover:text-slate-50 transition absolute top-5 right-16 items-center text-lg">
+                            Cart</a>
+                    </Link>
                 </div>
 
             </div>
