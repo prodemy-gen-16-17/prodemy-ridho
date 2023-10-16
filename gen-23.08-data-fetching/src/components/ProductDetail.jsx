@@ -1,23 +1,33 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
-import data from './data.json';
+// import data from './data.json';
+import useSWR from 'swr';
+import axios from 'axios';
 
-function ProductDetail() {
-    const { productId } = useParams();
-    const product = data.find((ambil) => ambil.id === parseInt(productId));
+function ProductDetail(props) {
+    const getProducts = (url) => axios.get(url).then((response) => response.data);
+    const { id } = useParams();
+    const { data, error } = useSWR(`http://localhost:3000/products/${id}`, getProducts)
+
+    // const { productId } = useParams();
+    // const product = data.find((ambil) => ambil.id === parseInt(productId));
     const [selectedImage, setSelectedImage] = useState(null);
     const handleImageClick = (imageSrc) => {
         setSelectedImage(imageSrc);
     };
 
-    if (!product) {
+    if (error) {
+        return <div>Error loading data</div>;
+    }
+    if (!data) {
         return <div>Nothing</div>;
     }
 
     const { title, secTitle, imageSrc, price, priceBefore, rating, reviews, releaseDate, img11, img12
-    } = product;
+    } = data;
 
+    console.log(data)
 
 
     return (

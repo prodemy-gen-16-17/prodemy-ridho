@@ -1,11 +1,17 @@
 import React from 'react';
 import ProductCard from './ProductCard';
-import data from './data.json';
 import { useState, useEffect } from 'react';
+import useSWR from 'swr';
+import axios from 'axios';
 
 
 function Product(props) {
-    const [sortedData, sortingData] = useState(data);
+    const getProducts = (url) => axios.get(url).then((response) => response.data);
+    const { data, error } = useSWR("http://localhost:3000/products", getProducts);
+
+    const [sortedData, sortingData] = useState([]);
+
+
     const { titleCard } = props;
 
     {/* Cara Pertama */ }
@@ -20,27 +26,35 @@ function Product(props) {
         const sortFunction = sortFunctions[sortBy];
 
         if (sortFunction) {
-            const dataSorting = [...sortedData];
+            const dataSorting = [...data];
             dataSorting.sort(sortFunction);
             sortingData(dataSorting);
         }
     };
 
     useEffect(() => {
-        // Default sorting by releaseDate (Terbaru ke Lama)
-        sortProducts('releaseDate');
-    }, []);
+        if (data) {
+            // Default sorting by releaseDate (Terbaru ke Lama)
+            sortingData([...data].sort(sortFunctions.releaseDate));
+        }
+    }, [data]);
+
+    if (!data) {
+        return <div>Loading...</div>;
+    }
+
+    console.log(sortedData)
 
     return (
         <div className="container font-sosial mx-auto">
 
             <h2 className="mt-24 mb-10 pl-14 font-bold text-3xl text-slate-700 uppercase">{titleCard}</h2>
 
-            <div className="container px-6 sm:flex sm:flex-wrap sm:gap-6 sm:justify-evenly product" id="product">
-                {sortedData.map((product) => (
+            <div className="container px-6 sm:flex sm:flex-wrap sm:gap-6 sm:justify-evenly product" id="products">
+                {sortedData?.map((product) => (
                     <ProductCard
                         key={product.id}
-                        {...product}
+                        product={product}
                     />
                 ))}
             </div>

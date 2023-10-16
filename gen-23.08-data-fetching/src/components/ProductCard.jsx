@@ -1,8 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useSWR from 'swr';
+import axios from 'axios';
 
 function ProductCard(props) {
-    const { id, title, imageSrc, price, releaseDate } = props;
+    const getProducts = (url) => axios.get(url).then((response) => response.data);
+    const { data, error } = useSWR("http://localhost:3000/products", getProducts)
+
+    if (error) return <div>Error fetching data</div>;
+    if (!data) return <div>Loading...</div>;
+
+    const { id, title, imageSrc, price, releaseDate } = props.product;
+
+    console.log(props)
+
 
     return (
         <div className="rounded-md shadow-lg overflow-hidden mb-10 sm:mb-0 sm:w-64 md:w-80 lg:w-72">
