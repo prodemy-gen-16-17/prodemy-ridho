@@ -27,10 +27,10 @@ function Tampilan() {
                             </a>
                         ))}
                     </div>
-                    <Link to={"/form"}>
-                        <a className="text-black hover:text-slate-50 transition absolute top-5 right-16 items-center text-lg">
-                            Cart</a>
-                    </Link>
+
+                    <a href="#" className="text-black hover:text-slate-50 transition absolute top-5 right-16 items-center text-lg">
+                        Cart</a>
+
                 </div>
 
             </div>

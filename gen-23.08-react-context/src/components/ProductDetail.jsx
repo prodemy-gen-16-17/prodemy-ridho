@@ -1,10 +1,49 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import useSWR from 'swr';
 import axios from 'axios';
+import { CheckoutContext } from '../context/CheckoutContext';
+import useRegularHooks from '../hooks/useRegularHooks';
 
 function ProductDetail(props) {
+    const { dataCheckout, setDataCheckout } = useContext(CheckoutContext);
+    const { navigate } = useRegularHooks();
+    const [isSubmitEnabled, setIsSubmitEnabled] = useState(false);
+
+    const [qty, setQty] = useState(1);
+
+    const incrementQty = () => setQty(qty + 1);
+    const decrementQty = () => {
+        if (qty > 1) {
+            setQty(qty - 1);
+        }
+    };
+
+    const [selectedSize, setSelectedSize] = useState(null);
+
+    const handleSizeChange = (size) => {
+        setSelectedSize(size);
+        checkSubmitButtonStatus();
+    };
+
+    const checkSubmitButtonStatus = () => {
+        setIsSubmitEnabled(selectedSize && qty > 0);
+    };
+
+    const onClickBuyNow = () => {
+        if (isSubmitEnabled) {
+            setDataCheckout({
+                ...data,
+                size: selectedSize,
+                qty,
+            });
+            navigate("/checkout");
+        }
+    };
+
+
+
     const getProducts = (url) => axios.get(url).then((response) => response.data);
     const { id } = useParams();
     const { data, error } = useSWR(`http://localhost:3000/products/${id}`, getProducts)
@@ -55,31 +94,61 @@ function ProductDetail(props) {
                         <h3 className='text-xl text-white mb-3 uppercase font-sosial'>Size</h3>
                         <div className='flex item-center gap-2'>
                             <div className='size-selector'>
-                                <input type="radio" name='size' className='hidden' id='size-xs' />
+                                <input hidden
+                                    type="radio"
+                                    name="size"
+                                    id="size-xs"
+                                    checked={selectedSize === 'XS'}
+                                    onChange={() => handleSizeChange('XS')}
+                                />
                                 <label htmlFor="size-xs" className='mb-5 text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-white'>
                                     XS
                                 </label>
                             </div>
                             <div className='size-selector'>
-                                <input type="radio" className='hidden' name='size' id='size-s' />
+                                <input hidden
+                                    type="radio"
+                                    name="size"
+                                    id="size-s"
+                                    checked={selectedSize === 'S'}
+                                    onChange={() => handleSizeChange('S')}
+                                />
                                 <label htmlFor="size-s" className='mb-5 text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-white'>
                                     S
                                 </label>
                             </div>
                             <div className='size-selector'>
-                                <input type="radio" name='size' className='hidden' id='size-l' />
+                                <input hidden
+                                    type="radio"
+                                    name="size"
+                                    id="size-l"
+                                    checked={selectedSize === 'L'}
+                                    onChange={() => handleSizeChange('L')}
+                                />
                                 <label htmlFor="size-l" className='mb-5 text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-white'>
                                     L
                                 </label>
                             </div>
                             <div className='size-selector'>
-                                <input type="radio" name='size' className='hidden' id='size-m' />
+                                <input hidden
+                                    type="radio"
+                                    name="size"
+                                    id="size-m"
+                                    checked={selectedSize === 'M'}
+                                    onChange={() => handleSizeChange('M')}
+                                />
                                 <label htmlFor="size-m" className='mb-5 text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-white'>
                                     M
                                 </label>
                             </div>
                             <div className='size-selector'>
-                                <input type="radio" name='size' className='hidden' id='size-xl' />
+                                <input hidden
+                                    type="radio"
+                                    name="size"
+                                    id="size-xl"
+                                    checked={selectedSize === 'XL'}
+                                    onChange={() => handleSizeChange('XL')}
+                                />
                                 <label htmlFor="size-xl" className='mb-5 text-xs border border-gray-200 rounded-sm h-6 w-6 flex items-center justify-center cursor-pointer shadow-sm text-white'>
                                     XL
                                 </label>
@@ -89,13 +158,16 @@ function ProductDetail(props) {
                     <div className='mt-4 mb-4'>
                         <h3 className='text-sm text-white uppercase mb-1'>Quantity</h3>
                         <div className='flex border border-gray-300 text-white divide-x divide-gray-300 w-max'>
-                            <div className='h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none'>-</div>
-                            <div className='h-8 w-8 text-xl flex items-center justify-center'>2</div>
-                            <div className='h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none'>+</div>
+                            <button className='h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none' onClick={decrementQty}>-</button>
+                            <input type='number' name="qty" value={qty} disabled className='h-8 w-8 text-xl flex items-center justify-center' />
+                            <button className='h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none' onClick={incrementQty}>+</button>
                         </div>
                     </div>
                     <div className='flex gap-3 border-b border-slate-50 pb-5 mt-6'>
-                        <a href="#" className='bg-slate-600 border border-slate-600 text-white px-8 py-2 font-sosial rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-slate-800 transition'>
+                        <a
+                            onClick={isSubmitEnabled ? onClickBuyNow : undefined}
+                            className={`bg-slate-600 border border-slate-600 text-white px-8 py-2 font-sosial rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-slate-800 transition ${isSubmitEnabled ? '' : 'opacity-50 cursor-not-allowed'}`}
+                        >
                             <span>🛒</span> Add to cart
                         </a>
                         <a href="#" className='border border-slate-300 text-white px-8 py-2 font-sosial rounded uppercase flex items-center gap-2 hover:text-slate-800 transition'>

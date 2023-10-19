@@ -104,5 +104,64 @@
       "img11": "/src/img/cc8-1.png",
       "img12": "/src/img/cc8-2.jpeg"
     }
+  ],
+  "bookings": [
+    {},
+    {
+      "id": "5a87daab-6971-41f3-80f4-dec06382fed8",
+      "customerName": "ridho",
+      "customerEmail": "Alrafi@gmail.com",
+      "customerTelp": "123123123123",
+      "chocolateName": "LOVE 12-PACK",
+      "chocolateSize": "S",
+      "priceBooks": "123",
+      "qty": 3,
+      "metodePembayaran": "BCA",
+      "pilihanSesuai": true
+    },
+    {
+      "id": "bff5e242-d53d-438d-8aea-f8351011c0a9",
+      "customerName": "ridho",
+      "customerEmail": "alrafi@gmail.com",
+      "customerTelp": "123123123123",
+      "customerTanggalLahir": "2023-10-09T17:00:00.000Z",
+      "tanggalTransaksi": "2023-10-19T07:19:36",
+      "chocolateName": "SHARING CHOCOLATE CHRISTMAS CALENDER WITH 60 PSC. OF CHOCOLATE",
+      "chocolateSize": "M",
+      "priceBooks": "649",
+      "qty": 1,
+      "metodePembayaran": "BNI",
+      "pilihanSesuai": true
+    },
+    {
+      "id": "cf1b1e39-97c7-4986-8988-cc6bc576eb98",
+      "customerName": "ridho",
+      "customerEmail": "alrafi@gmail.com",
+      "customerTelp": "123456789012",
+      "customerTanggalLahir": "2006-08-15T17:00:00.000Z",
+      "tanggalTransaksi": "2023-10-19T07:22:04",
+      "chocolateName": "CREAM CHOCOLATE CHRISTMAS CALENDAR WITH 30 DOORS",
+      "chocolateSize": "XL",
+      "priceBooks": "800",
+      "qty": 2,
+      "priceTotal": 1600,
+      "metodePembayaran": "BNI",
+      "pilihanSesuai": true
+    },
+    {
+      "id": "b38de66a-6504-4aee-b928-e3508a25ab1b",
+      "customerName": "ridho",
+      "customerEmail": "alrafi@gmail.com",
+      "customerTelp": "123123123123",
+      "customerTanggalLahir": null,
+      "tanggalTransaksi": "2023-10-19T07:30:50",
+      "chocolateName": "SHARING CHOCOLATE CHRISTMAS CALENDER WITH 60 PSC. OF CHOCOLATE",
+      "chocolateSize": "S",
+      "priceBooks": "649",
+      "qty": 4,
+      "priceTotal": 2596,
+      "metodePembayaran": "BNI",
+      "pilihanSesuai": true
+    }
   ]
 }
