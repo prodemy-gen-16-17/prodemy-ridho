@@ -6,7 +6,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { CheckoutContext } from '../context/CheckoutContext';
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 
 
 
@@ -72,7 +72,7 @@ function CheckoutForm() {
             console.log(data);
 
             const payload = {
-                id: bookingId,
+                // id: bookingId,
                 customerName: data.nama,
                 customerEmail: data.email,
                 customerTelp: data.nomorTelepon,

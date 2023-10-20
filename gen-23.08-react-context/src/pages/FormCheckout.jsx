@@ -7,7 +7,7 @@ import { formFooter, linkFooter } from '../components/DataFooter';
 const FormCheckout = () => {
     return (
         <>
-            <Header titleHeader="Selamat Berbelanja" />
+            <Header titleHeader="Checkout" />
             <CheckoutForm />
             <div className="mb-96"></div>
             <Footer formFooter={formFooter} linkFooter={linkFooter} />

@@ -162,6 +162,36 @@
       "priceTotal": 2596,
       "metodePembayaran": "BNI",
       "pilihanSesuai": true
+    },
+    {
+      "id": "2b98d2ef-dc53-4043-83fb-656d2d4c58c0",
+      "customerName": "ridho",
+      "customerEmail": "alrafi@gmail.com",
+      "customerTelp": "123123123123",
+      "customerTanggalLahir": null,
+      "tanggalTransaksi": "2023-10-19T10:25:21",
+      "chocolateName": "LIGHT BLUE CHOCOLATE CHRISTMAS CALENDAR WITH 30 DOORS",
+      "chocolateSize": "XL",
+      "priceBooks": "1000",
+      "qty": 3,
+      "priceTotal": 3000,
+      "metodePembayaran": "BNI",
+      "pilihanSesuai": true
+    },
+    {
+      "customerName": "asld",
+      "customerEmail": "asd@gmail.com",
+      "customerTelp": "123123123123",
+      "customerTanggalLahir": null,
+      "tanggalTransaksi": "2023-10-19T10:31:33",
+      "chocolateName": "FOR ALL YOUR SENSES 14 PACK",
+      "chocolateSize": "L",
+      "priceBooks": "199",
+      "qty": 4,
+      "priceTotal": 796,
+      "metodePembayaran": "BNI",
+      "pilihanSesuai": true,
+      "id": "uDxl-r5"
     }
   ]
 }

@@ -7,7 +7,7 @@ import { CheckoutContext } from '../context/CheckoutContext';
 import useRegularHooks from '../hooks/useRegularHooks';
 
 function ProductDetail(props) {
-    const { dataCheckout, setDataCheckout } = useContext(CheckoutContext);
+    const { setDataCheckout } = useContext(CheckoutContext);
     const { navigate } = useRegularHooks();
     const [isSubmitEnabled, setIsSubmitEnabled] = useState(false);
 
@@ -24,12 +24,13 @@ function ProductDetail(props) {
 
     const handleSizeChange = (size) => {
         setSelectedSize(size);
-        checkSubmitButtonStatus();
-    };
-
-    const checkSubmitButtonStatus = () => {
+        // checkSubmitButtonStatus();
         setIsSubmitEnabled(selectedSize && qty > 0);
     };
+
+    // const checkSubmitButtonStatus = () => {
+    //     setIsSubmitEnabled(selectedSize && qty > 0);
+    // };
 
     const onClickBuyNow = () => {
         if (isSubmitEnabled) {
@@ -164,12 +165,12 @@ function ProductDetail(props) {
                         </div>
                     </div>
                     <div className='flex gap-3 border-b border-slate-50 pb-5 mt-6'>
-                        <a
+                        <button
                             onClick={isSubmitEnabled ? onClickBuyNow : undefined}
                             className={`bg-slate-600 border border-slate-600 text-white px-8 py-2 font-sosial rounded uppercase flex items-center gap-2 hover:bg-transparent hover:text-slate-800 transition ${isSubmitEnabled ? '' : 'opacity-50 cursor-not-allowed'}`}
                         >
                             <span>🛒</span> Add to cart
-                        </a>
+                        </button>
                         <a href="#" className='border border-slate-300 text-white px-8 py-2 font-sosial rounded uppercase flex items-center gap-2 hover:text-slate-800 transition'>
                             <span>♥</span> Wishlist
                         </a>
