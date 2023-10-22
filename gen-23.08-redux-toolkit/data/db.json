@@ -105,21 +105,5 @@
       "img12": "/src/img/cc8-2.jpeg"
     }
   ],
-  "bookings": [
-    {
-      "customerName": "ridho",
-      "customerEmail": "alrafi@gmail.com",
-      "customerTelp": "123123123123",
-      "customerTanggalLahir": null,
-      "tanggalTransaksi": "2023-10-20T10:34:48",
-      "chocolateName": "GLUTENFREE 12-PACK",
-      "chocolateSize": "L",
-      "priceBooks": "180",
-      "qty": 3,
-      "priceTotal": 540,
-      "metodePembayaran": "MANDIRI",
-      "pilihanSesuai": true,
-      "id": 1
-    }
-  ]
+  "bookings": []
 }
