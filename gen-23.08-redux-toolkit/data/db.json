@@ -105,5 +105,20 @@
       "img12": "/src/img/cc8-2.jpeg"
     }
   ],
-  "bookings": []
+  "bookings": [
+    {
+      "customerName": "ridho",
+      "customerEmail": "asdasd@gmail.com",
+      "customerTelp": "080808080808",
+      "tanggalTransaksi": "2023-10-23T10:16:58",
+      "chocolateName": "LOVE 12-PACK",
+      "chocolateSize": "XL",
+      "priceBooks": "123",
+      "qty": 3,
+      "priceTotal": 369,
+      "metodePembayaran": "MANDIRI",
+      "pilihanSesuai": true,
+      "id": 1
+    }
+  ]
 }
