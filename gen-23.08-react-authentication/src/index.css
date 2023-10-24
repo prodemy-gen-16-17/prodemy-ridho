@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .size-selector input:checked + label{
+        @apply bg-slate-50 text-slate-900;
+    }
+  }
