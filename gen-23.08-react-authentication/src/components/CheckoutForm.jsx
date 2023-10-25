@@ -10,12 +10,13 @@ import { useSelector } from 'react-redux';
 
 function CheckoutForm() {
     const { dataCheckout } = useSelector((state) => state.checkout);
-    console.log(dataCheckout);
+    const user = useSelector((state) => state.auth.user);
+
 
 
     const schema = yup.object().shape({
-        nama: yup.string().required('Nama wajib diisi'),
-        email: yup.string().email('Email tidak valid').required('Email wajib diisi'),
+        nama: yup.string().required('Harus diisi'),
+        email: yup.string().email('Email tidak valid').required('Isikan Email'),
         nomorTelepon: yup
             .string()
             .matches(/^\d{12}$/, 'Nomor telepon harus 12 digit')
@@ -94,11 +95,13 @@ function CheckoutForm() {
                     <div className="mb-4">
                         <label htmlFor='nama' className="block text-black text-lg">Nama:</label>
                         <input
+                            value={user.name}
                             id='nama'
                             autoComplete='given-name'
                             placeholder='Nama Lengkap'
-                            type="text"
+
                             {...register('nama')}
+
                             className="w-full bg-amber-100 font-bold p-2 rounded-lg"
                         />
                         <p className="text-red-600">{errors.nama?.message}</p>
@@ -107,11 +110,13 @@ function CheckoutForm() {
                     <div className="mb-4">
                         <label htmlFor='email' className="block text-black text-lg">Email:</label>
                         <input
+                            value={user.email}
                             id='email'
                             autoComplete='email'
                             placeholder='Email'
-                            type="text"
+
                             {...register('email')}
+
                             className="w-full bg-amber-100 font-bold p-2 rounded-lg"
                         />
                         <p className="text-red-600">{errors.email?.message}</p>

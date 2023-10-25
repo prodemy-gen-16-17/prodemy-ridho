@@ -60,7 +60,7 @@ function ProductDetail(props) {
     const { title, secTitle, imageSrc, price, priceBefore, rating, reviews, releaseDate, img11, img12
     } = data;
 
-    console.log(data)
+    // console.log(data)
 
 
     return (

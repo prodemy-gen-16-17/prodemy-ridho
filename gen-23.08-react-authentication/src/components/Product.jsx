@@ -43,7 +43,7 @@ function Product(props) {
         return <div>Loading...</div>;
     }
 
-    console.log(sortedData)
+    // console.log(sortedData)
 
     return (
         <div className="container font-sosial mx-auto">
