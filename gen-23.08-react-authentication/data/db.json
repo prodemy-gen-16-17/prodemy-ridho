@@ -1,5 +1,12 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "prodemy@gmail.com",
+      "password": "$2a$10$NsKm9naMADJNS35wqA2p1OxyFwPnFRZd08OQfis7ZxsEM7rJ4tOyy",
+      "name": "Abdi",
+      "id": 1
+    }
+  ],
   "products": [
     {
       "id": 1,
@@ -106,5 +113,20 @@
       "img12": "/src/img/cc8-2.jpeg"
     }
   ],
-  "bookings": []
+  "bookings": [
+    {
+      "customerName": "Abdi",
+      "customerEmail": "prodemy@gmail.com",
+      "customerTelp": "123123123123",
+      "tanggalTransaksi": "2023-10-25T16:13:47",
+      "chocolateName": "MEGA SIZE CHOCOLATE CALENDAR WITH 30 DOORS",
+      "chocolateSize": "XL",
+      "priceBooks": "999",
+      "qty": 3,
+      "priceTotal": 2997,
+      "metodePembayaran": "MANDIRI",
+      "pilihanSesuai": true,
+      "id": 1
+    }
+  ]
 }
